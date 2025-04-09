@@ -7,30 +7,23 @@
 <body>
     <h1>Ordenar Números</h1>
     <script>
-        // Solicitar al usuario 3 números por prompt y guardarlos en sus respectivas variables
         let num1 = parseFloat(prompt("Introduce el primer número:"));
         let num2 = parseFloat(prompt("Introduce el segundo número:"));
         let num3 = parseFloat(prompt("Introduce el tercer número:"));
-
-        // Crear un array con los números
+        
         let numbers = [num1, num2, num3];
 
-        // Ordenar los números de menor a mayor
         let sortedNumbersAsc = [...numbers].sort((a, b) => a - b);
 
-        // Ordenar los números de mayor a menor
         let sortedNumbersDesc = [...numbers].sort((a, b) => b - a);
-
-        // Identificar si los números son iguales
+        
         if (num1 === num2 && num2 === num3) {
             console.log("Todos los números son iguales.");
             document.body.innerHTML += "<p>Todos los números son iguales.</p>";
         } else {
-            // Imprimir los números ordenados de menor a mayor
             console.log("Números ordenados de menor a mayor: " + sortedNumbersAsc.join(", "));
             document.body.innerHTML += "<p>Números ordenados de menor a mayor: " + sortedNumbersAsc.join(", ") + "</p>";
 
-            // Imprimir los números ordenados de mayor a menor
             console.log("Números ordenados de mayor a menor: " + sortedNumbersDesc.join(", "));
             document.body.innerHTML += "<p>Números ordenados de mayor a menor: " + sortedNumbersDesc.join(", ") + "</p>";
         }
